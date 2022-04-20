@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+header {
+    font-size: 37px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #EC362D;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/*página quizz*/
+.top {
+    position: relative;
+    margin-top: 70px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) ,rgba(0,0,0,0.6));
+}
+
+.top img {
+    height: 227px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
+}
+
+.titulo-quizz {
+    font-size: 39px;
+    color: #ffffff;
+    font-weight: 400;
+    height: 227px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.conteudo-perguntas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e5e5e5;
+}
+
+.perguntas {
+    padding: 25px 35px 25px 35px;
+    margin-top: 70px;
+    box-shadow: 0 0 1em rgba(0,0,0,0.3);
+}
+
+.pergunta {
+    font-size: 23px;
+    font-weight: 700;
+    color: #ffffff;
+    height: 138px;
+    width: 689px;
+    background-color: #434ca0;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.respostas {
+    width: 689px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.resposta>img {
+    height: 175px;
+    width: 330px;
+    margin-top: 20px;
+}
+
+.resposta-texto {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+}
