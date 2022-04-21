@@ -77,7 +77,15 @@ header p {
     margin-top: 12px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between
+    justify-content: space-between;
+}
+.top2 {
+    position: relative;
+    margin-top: 70px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) ,rgba(0,0,0,0.6));
+    width: 340px;
+    height: 181px;
+    z-index: 1;
 }
 .imagemQuizz {
     width: 340px;
@@ -85,9 +93,8 @@ header p {
     border-radius: 5px;
     cursor: pointer;
     position: relative;
-    background-position: center;
-    background-size: cover;   
     margin-bottom: 12px;
+    z-index: 0;
 }
 .tituloQuizz {
     width: 301px;

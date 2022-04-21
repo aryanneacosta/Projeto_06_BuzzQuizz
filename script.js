@@ -12,7 +12,7 @@ function renderizarQuizzes(resposta) {
     for (let i = 0; i < resposta.data.length; i++) {
         console.log(resposta.data[i].title);
         containerQuizz.innerHTML += `
-            <div> 
+            <div class="top2" onclick="acessarQuizz(this)"> 
                 <img src="${resposta.data[i].image}" class="imagemQuizz"> 
             <div class="tituloQuizz" > 
                 ${resposta.data[i].title} 
@@ -34,9 +34,12 @@ function acessarQuizz(idQuizz) {
 }
 
 function mostrarTelaQuizz() {
-
+    document.querySelector(".telaUm").classList.add("escondido");
+    document.querySelector(".telaDois").classList.remove("escondido");
+    
 }
 
-function erroAcessarQuizz() {
+function erroAcessarQuizz(erro) {
     alert("Erro ao acessar quizz. Tente novamente.");
+    console.log(resposta.data.erro);
 }
