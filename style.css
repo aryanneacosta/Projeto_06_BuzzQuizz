@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+* {
+    box-sizing: border-box;
+}
+header {
+    background-color: #EC362D;
+    width: 100%;
+    height: 69px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 8px lightslategray;
+}
+header p {
+    color: #FFFFFF;
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 43px;
+}
+.criarQuizz {
+    border: 2px dotted #D4D4D4;
+    border-radius: 5px;
+    width: 1051px;
+    height: 181px;
+    margin-top: 146px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.criarQuizz span {
+    width: 250px;
+    height: 107px;
+    font-size: 20px;
+    word-break: break-word;
+    color: #B9B9B9;
+    text-align: center;
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 7px;
+    line-height: 23px;
+}
+.criarQuizz button {
+    border: 2px dotted #EC362D;
+    border-radius: 50px;
+    width: 151px;
+    height: 40px;
+    margin-bottom: 33px;
+    cursor: pointer;
+    background-color: #FAFAFA;
+    font-size: 18px;
+    color: #EC362D;
+}
+.todosOsQuizzes h1 {
+    font-size: 18px;
+    margin-top: 77px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.containerImagens {
+    width: 1051px;
+    height: 374px;
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+.imagemQuizz {
+    width: 340px;
+    height: 181px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%, #000000 100%);
+    background-position: center;
+    background-size: cover;   
+    margin-bottom: 12px;
+}
+.tituloQuizz {
+    width: 301px;
+    height: 54px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 22.27px;
+    font-size: 19px;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    word-break: break-word;
+    margin: -60px;
+    margin-left: 10px;
+}
+.escondido {
+    display: none;
+}
