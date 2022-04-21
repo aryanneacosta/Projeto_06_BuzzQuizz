@@ -19,7 +19,6 @@ function renderizarQuizzes(resposta) {
             </div>
         </div> `
     }
-
 }
 
 pegarQuizzes();
@@ -28,7 +27,7 @@ function erroPegarQuizzes() {
     alert("Erro na coleta de dados da API. Tente novamente.");
 }
 
-function acessarQuizz() {
+function acessarQuizz(idQuizz) {
     let promise = axios.get(`${URL_API}/quizzes/${idQuizz}`);
     promise.then(mostrarTelaQuizz);
     promise.catch(erroAcessarQuizz);
