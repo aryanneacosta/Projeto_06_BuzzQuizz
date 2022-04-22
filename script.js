@@ -35,11 +35,17 @@ function acessarQuizz(idQuizz) {
 
 function mostrarTelaQuizz() {
     document.querySelector(".telaUm").classList.add("escondido");
-    document.querySelector(".telaDois").classList.remove("escondido");
-    
+    document.querySelector(".telaDois").classList.remove("escondido");   
 }
 
 function erroAcessarQuizz(erro) {
     alert("Erro ao acessar quizz. Tente novamente.");
     console.log(resposta.data.erro);
+}
+
+function telaCriarQuizz() {
+    if (localStorage.length === 0) {
+        document.querySelector(".tela1").classList.add("escondido");
+        
+    }
 }
