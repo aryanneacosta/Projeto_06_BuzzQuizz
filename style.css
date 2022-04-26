@@ -25,9 +25,6 @@ body {
     align-items: center;
     background-color: #FFFFFF;
 }
-<<<<<<< HEAD
-/* TELA 1 */
-=======
 
 * {
     box-sizing: border-box;
@@ -58,7 +55,6 @@ p:hover {
     cursor: pointer;
 }
 
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2
 .criarQuizz {
     border: 2px dotted #D4D4D4;
     border-radius: 5px;
@@ -113,11 +109,6 @@ p:hover {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-<<<<<<< HEAD
-/* TELA 2 */
-=======
-
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2
 .top2 {
     position: relative;
     margin-top: 70px;
@@ -151,8 +142,6 @@ p:hover {
     margin: -60px;
     margin-left: 10px;
 }
-<<<<<<< HEAD
-=======
 
 .escondido {
     display: none;
@@ -174,7 +163,6 @@ p:hover {
     z-index: 1;
 }
 
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2
 /*página quizz*/
 .telaDois {
     width: 100%;
@@ -193,12 +181,8 @@ p:hover {
     position: relative;
     background: linear-gradient(to bottom, rgba(0,0,0,0.1) ,rgba(0,0,0,0.6));
 }
-<<<<<<< HEAD
-.top img {
-=======
 
 .top>img {
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2
     height: 227px;
     width: 100%;
     object-fit: cover;
@@ -251,16 +235,12 @@ p:hover {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-<<<<<<< HEAD
-.resposta > img {
-=======
 
 .resposta:hover {
     cursor: pointer;
 }
 
 .resposta>img {
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2
     height: 175px;
     width: 330px;
     margin-top: 20px;
@@ -272,7 +252,6 @@ p:hover {
     font-weight: 700;
     margin-top: 10px;
 }
-<<<<<<< HEAD
 /* TELA 3-1 */
 .tela3-1 {
     width: 100%;
@@ -492,7 +471,6 @@ ul.nivel1:first-child {
 .escondido {
     display: none;
 }
-=======
 
 .certo {
     color: #009C22;
@@ -572,4 +550,3 @@ ul.nivel1:first-child {
 
 
 
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2

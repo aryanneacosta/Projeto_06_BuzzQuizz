@@ -19,7 +19,6 @@
 
 <body>
 
-<<<<<<< HEAD
     <div class="topo"> BuzzQuizz </div>
 
     <main class="tela1">
@@ -33,10 +32,28 @@
         </section>
     </main>
 
-    <main class="tela2 escondido">
+    <main class="telaDois escondido">
 
-        <div class="perguntas"></div>
-    
+        <header>
+            <p onclick="home()">
+                BuzzQuizz
+            </p>
+        </header>
+
+        <div class="conteudo-quizz"></div>
+
+        <div class="finalizar escondido">
+            <div class="finalizar-top"></div>
+            <div class="finalizar-content">
+                <p class="finalizar-texto"></p>
+            </div>
+        </div>
+
+        <div class="finalizar-botoes escondido">
+            <div class="reiniciar" onclick="mostrarTelaQuizz()">Reiniciar Quizz</div>
+            <div class="voltar" onclick="home()">Voltar pra home</div>
+        </div>
+
     </main>
 
     <main class="telasQuizzes escondido"> </main>
@@ -74,61 +91,4 @@
 </body>
 
 </html>
-=======
-    <div class="telaUm">
-
-        <header>
-            <p onclick="home()">
-                BuzzQuizz
-            </p>
-        </header>
-
-        <main class="telaUmCorpo">
-
-            <section class="criarQuizz">
-                <span>Você não criou nenhum quizz ainda :(</span>
-                <button>Criar Quizz</button>
-            </section>
-
-            <section class="todosOsQuizzes">
-                <h1>
-                    Todos os Quizzes
-                </h1>
-                <div class="containerImagens">
-                </div>
-            </section>
-
-        </main>
-    </div>
-
-    <div class="telaDois escondido">
-
-        <header>
-            <p onclick="home()">
-                BuzzQuizz
-            </p>
-        </header>
-
-        <div class="conteudo-quizz"></div>
-
-        <div class="finalizar escondido">
-            <div class="finalizar-top"></div>
-            <div class="finalizar-content">
-                <p class="finalizar-texto"></p>
-            </div>
-        </div>
-
-        <div class="finalizar-botoes escondido">
-            <div class="reiniciar" onclick="mostrarTelaQuizz()">Reiniciar Quizz</div>
-            <div class="voltar" onclick="home()">Voltar pra home</div>
-        </div>
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="script.js"></script>
-
-</body>
-
-</html>
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2
+    

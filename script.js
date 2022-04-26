@@ -38,11 +38,6 @@ function erroPegarQuizzes() {
 
 
 
-<<<<<<< HEAD
-        if (arrQuizzes[i] === tituloQuizz) {
-            
-            idQuizz = idQuizzes[i];
-=======
 function verificarResposta(idPergunta, idResposta) {
     const respostas = document.querySelector(`.pergunta${idPergunta}`).parentElement.querySelectorAll(".resposta");
     for (let i = 0; i < respostas.length; i++) {
@@ -55,7 +50,6 @@ function verificarResposta(idPergunta, idResposta) {
             respostas[i].classList.add("certo");
         } else {
             respostas[i].classList.add("errado");
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2
         }
     }
     console.log(respostas)
@@ -65,9 +59,6 @@ function verificarResposta(idPergunta, idResposta) {
     console.log(idPergunta)
     console.log(qtdPerguntas)
     
-<<<<<<< HEAD
-    let promise = axios.get(`${URL_API}/quizzes/8023`);
-=======
     if (idPergunta + 1 === qtdPerguntas) {
         finalizarQuizz();
     }
@@ -91,21 +82,15 @@ function acessarQuizz(quizzId) {
     console.log(idQuizz);
 
     let promise = axios.get(`${URL_API}/quizzes/${idQuizz}`);
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2
     promise.then(mostrarTelaQuizz);
     promise.catch(erroAcessarQuizz);
 }
 
 
 function mostrarTelaQuizz(perguntas) {
-<<<<<<< HEAD
     
-    document.querySelector(".tela1").classList.add("escondido");
-    document.querySelector(".tela2").classList.remove("escondido");   
-=======
-    document.querySelector(".telaUm").classList.add("escondido");
+    document.querySelector(".tela1").classList.add("escondido"); 
     document.querySelector(".telaDois").classList.remove("escondido");
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2
 
     //html do quizz
     const paginaQuizz = document.querySelector(".conteudo-quizz");
@@ -142,12 +127,6 @@ function mostrarTelaQuizz(perguntas) {
                 <img src="${img}"/>
                 <div class="resposta-texto">${texto}</div>
             </div>`
-<<<<<<< HEAD
-        }   
-        `</div>
-        </div>`
-    }
-=======
             console.log(respostas[j].isCorrectAnswer);
             console.log(respostasCorretas);
         }
@@ -206,7 +185,6 @@ function finalizarQuizz() {
     levelFinal.classList.remove("escondido");
     const botoesFinal = document.querySelector(".finalizar-botoes");
     botoesFinal.classList.remove("escondido");
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2
 }
 
 function erroAcessarQuizz(erro) {
@@ -214,32 +192,11 @@ function erroAcessarQuizz(erro) {
     console.log(resposta.data.erro);
 }
 
-<<<<<<< HEAD
 function telaCriarQuizz() {
     document.querySelector(".tela1").classList.add("escondido");
     document.querySelector(".tela3-1").classList.remove("escondido");
 }
 
-`
-    <div class="pergunta">Qual o sobrenome do Harry?</div>
-    <div class="respostas">
-        <div class="resposta">
-            <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-            <div class="resposta-texto">Styles</div>        
-        </div>
-        <div class="resposta">
-            <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-            <div class="resposta-texto">Styles</div>
-        </div>
-        <div class="resposta">
-            <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-            <div class="resposta-texto">Styles</div>
-        </div>
-        <div class="resposta">
-            <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-            <div class="resposta-texto">Styles</div>
-        </div>
-    </div>`
 
 // CRIANDO O QUIZ
   
@@ -539,7 +496,8 @@ function salvarDados(response) {
   
     localStorage.setItem("meusQuizzes", JSON.stringify(meusQuizzes));
 }
-=======
+
+
 //respostas serem aleatórias
 const randomizar = {
     shuffle(array) {
@@ -564,10 +522,9 @@ const randomizar = {
 
 //voltar para a home pelo header
 function home() {
-    document.querySelector(".telaUm").classList.remove("escondido");
+    document.querySelector(".tela1").classList.remove("escondido");
     document.querySelector(".telaDois").classList.add("escondido");
 }
 
 
 
->>>>>>> 0a53281ea5a3a13d496c0abb29e56aeed65064f2
