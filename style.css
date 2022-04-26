@@ -32,6 +32,10 @@ header p {
     line-height: 43px;
 }
 
+p:hover {
+    cursor: pointer;
+}
+
 .criarQuizz {
     border: 2px dotted #D4D4D4;
     border-radius: 5px;
@@ -187,14 +191,18 @@ header p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .perguntas {
+    width: 759px;
     padding: 25px 35px 25px 35px;
     margin-top: 70px;
     box-shadow: 0 0 1em rgba(0,0,0,0.3);
     background-color: #e5e5e5;
+}
+
+.perguntas:last-child {
+    margin-bottom: 30px;
 }
 
 .pergunta {
@@ -203,7 +211,6 @@ header p {
     color: #ffffff;
     height: 138px;
     width: 689px;
-    background-color: #434ca0;
     display: flex;
     justify-content: center;
     align-items: center;  
@@ -214,6 +221,10 @@ header p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.resposta:hover {
+    cursor: pointer;
 }
 
 .resposta>img {
@@ -241,3 +252,70 @@ header p {
 .nao-selecionado {
     opacity: 40%;
 }
+
+.finalizar {
+    width: 759px;
+    margin: auto;
+    padding: 15px 15px 15px 15px;
+    box-shadow: 0 0 1em rgba(0,0,0,0.3);
+    background-color: #e5e5e5;
+    margin-top: 15px;
+    margin-bottom: 57px;
+}
+
+.finalizar-top {
+    font-size: 23px;
+    font-weight: 700;
+    color: #ffffff;
+    height: 100px;
+    width: 727px;
+    background-color: #EC362D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.finalizar-content {
+    display: flex;
+}
+
+.finalizar-content>p {
+    margin-left: 18px;
+    color: #484848;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.finalizar-content>img {
+    height: 273px;
+    width: 364px;
+}
+
+
+.reiniciar {
+    margin: auto;
+    height: 52px;
+    width: 260px;
+    color: #ffffff;
+    background-color: #EC362D;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.voltar {
+    margin: auto;
+    height: 44px;
+    width: 260px;
+    color: #818181;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 85px;
+}
+
+
+

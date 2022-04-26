@@ -19,48 +19,59 @@
 
 <body>
 
-<div class="telaUm">
+    <div class="telaUm">
 
-    <header>
-        <p> 
-            BuzzQuizz
-        </p>
-    </header>
+        <header>
+            <p onclick="home()">
+                BuzzQuizz
+            </p>
+        </header>
 
-    <main class="telaUmCorpo">
+        <main class="telaUmCorpo">
 
-    <section class="criarQuizz">
-        <span>Você não criou nenhum quizz ainda :(</span>
-        <button>Criar Quizz</button>
-    </section>
+            <section class="criarQuizz">
+                <span>Você não criou nenhum quizz ainda :(</span>
+                <button>Criar Quizz</button>
+            </section>
 
-    <section class="todosOsQuizzes">
-        <h1>
-            Todos os Quizzes
-        </h1>
-        <div class="containerImagens">
+            <section class="todosOsQuizzes">
+                <h1>
+                    Todos os Quizzes
+                </h1>
+                <div class="containerImagens">
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <div class="telaDois escondido">
+
+        <header>
+            <p onclick="home()">
+                BuzzQuizz
+            </p>
+        </header>
+
+        <div class="conteudo-quizz"></div>
+
+        <div class="finalizar escondido">
+            <div class="finalizar-top"></div>
+            <div class="finalizar-content">
+                <p class="finalizar-texto"></p>
+            </div>
         </div>
-    </section>
 
-    </main>
-</div>
+        <div class="finalizar-botoes escondido">
+            <div class="reiniciar" onclick="mostrarTelaQuizz()">Reiniciar Quizz</div>
+            <div class="voltar" onclick="home()">Voltar pra home</div>
+        </div>
 
-<div class="telaDois escondido">
+    </div>
 
-    <header>
-        <p> 
-            BuzzQuizz
-        </p>
-    </header>
-
-    <div class="conteudo-quizz"></div>
-    
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
 </html>
-
