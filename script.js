@@ -5,6 +5,7 @@ let arrAPI = [];
 let quizzId;
 let respostasCorretas = {};
 let qtdPerguntas;
+let levelFinal;
 
 // TRAZENDO OS QUIZZES DA API
 
@@ -15,7 +16,6 @@ function pegarQuizzes() {
 }
 
 function renderizarQuizzes(resposta) {
-    console.log(resposta.data);
     const containerQuizz = document.querySelector(".containerImagens");
     for (let i = 0; i < resposta.data.length; i++) {
         idQuizzes.push(resposta.data[i].id);
@@ -50,14 +50,10 @@ function verificarResposta(idPergunta, idResposta) {
             respostas[i].classList.add("errado");
         }
     }
-    console.log(respostas)
 
     levelUsuario = calculaPorcentagem();
 
     //verificar se todas as perguntas estão respondidas
-    console.log(idPergunta)
-    console.log(qtdPerguntas)
-
     if (idPergunta + 1 === qtdPerguntas) {
         setTimeout ( () => {
             const tituloFinal = document.querySelector(".finalizar-top");
@@ -70,7 +66,6 @@ function verificarResposta(idPergunta, idResposta) {
 
     setTimeout( () => {
         const proximaPergunta = document.querySelector(`.resposta[onclick*="verificarResposta"]`);
-        console.log(proximaPergunta); 
         proximaPergunta.scrollIntoView()
     }, 2000);
 
@@ -78,7 +73,6 @@ function verificarResposta(idPergunta, idResposta) {
 
 function acessarQuizz(quizzId) {
     const idQuizz = quizzId.querySelector(".id").textContent;
-    console.log(idQuizz);
 
     let promise = axios.get(`${URL_API}/quizzes/${idQuizz}`);
     promise.then(mostrarTelaQuizz);
@@ -98,7 +92,6 @@ function mostrarTelaQuizz(perguntas) {
     const paginaQuizz = document.querySelector(".conteudo-quizz");
     const title = perguntas.data.title;
     const image = perguntas.data.image;
-    console.log(perguntas.data)
 
     //titulo do quizz
     paginaQuizz.innerHTML =
@@ -129,8 +122,6 @@ function mostrarTelaQuizz(perguntas) {
                 <img src="${img}"/>
                 <div class="resposta-texto">${texto}</div>
             </div>`
-            console.log(respostas[j].isCorrectAnswer);
-            console.log(respostasCorretas);
         }
 
         //perguntas 
@@ -146,7 +137,6 @@ function mostrarTelaQuizz(perguntas) {
             </div>`;
 
         qtdPerguntas += 1;
-        console.log(qtdPerguntas)
     }
 
     document.querySelector(".top").scrollIntoView();
@@ -155,18 +145,16 @@ function mostrarTelaQuizz(perguntas) {
     //adicionando o texto da API
     const level = perguntas.data.levels;
     const tituloFinal = document.querySelector(".finalizar-top");
-    const imgFinal = document.querySelector(".finalizar-content");
+    const imgFinal = document.querySelector(".finalizar-imagem");
     const textoFinal = document.querySelector(".finalizar-texto");
     levelUsuario = calculaPorcentagem();
 
-    console.log(level)
     for (let i = 0; i < level.length; i++) {
         if (levelUsuario > level[i].minValue) {
-
         } else {
             tituloFinal.innerHTML = level[i].title;
             imgFinal.innerHTML = `<img src="${level[i].image}"/>`;
-            textoFinal.innerHTML = level[i].text;
+            textoFinal.innerHTML = `<p>${level[i].text}</p>`;
         }
     }
 }
@@ -177,7 +165,6 @@ function calculaPorcentagem() {
     let i = 0;
     while (i < qtdPerguntas) {
         const opcao = document.querySelector(`.pergunta${i}`).parentElement.querySelectorAll(".resposta");
-        console.log(opcao)
         for (let item of opcao) {
             if (Array.from(item.classList).includes("certo") && !Array.from(item.classList).includes("nao-selecionado")) {
                 acertosUsuario += 1;
@@ -185,8 +172,10 @@ function calculaPorcentagem() {
         }
         i++
     }
-    const levelUsuario = (acertosUsuario / i) * 100;
+    const levelUsuario = Math.round((acertosUsuario / i) * 100);
     console.log("levelUsuario: ", levelUsuario)
+    levelFinal = levelUsuario;
+
 }
 
 
@@ -200,7 +189,7 @@ function finalizarQuizz() {
 
 function erroAcessarQuizz(erro) {
     alert("Erro ao acessar quizz. Tente novamente.");
-    console.log(resposta.data.erro);
+
 }
 
 function telaCriarQuizz() {
@@ -492,7 +481,6 @@ function postValido(response) {
 
 function postInvalido(erro) {
     const statusCode = erro.response.data;
-    console.log(statusCode);
     alert("Deu ruim");
 }
 
@@ -539,10 +527,10 @@ function home() {
 }
 
 //reiniciar o quizz 
-function reiniciarQuizz() {
+function reiniciarQuizz(quizzId) {
     document.querySelector(".top").scrollIntoView();
-    window.location.href;
-    acessarQuizz(quizzId);
+    window.location.reload;
+    mostrarTelaQuizz();
 }
 
 

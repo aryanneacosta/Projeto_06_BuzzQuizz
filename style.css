@@ -494,13 +494,18 @@ ul.nivel1:first-child {
     color: #484848;
     font-size: 19px;
     font-weight: 700;
+    word-break: break-all;
 }
 
-.finalizar-content>img {
+.finalizar-imagem {
     height: 273px;
     width: 364px;
 }
 
+.finalizar-imagem>img {
+    height: 273px;
+    width: 364px;
+}
 
 .reiniciar {
     margin: auto;
