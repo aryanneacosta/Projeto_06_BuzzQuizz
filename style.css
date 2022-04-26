@@ -1,21 +1,7 @@
 * {
     box-sizing: border-box;
 }
-.topo {
-    font-size: 37px;
-    font-weight: 700;
-    color: #ffffff;
-    background-color: #EC362D;
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 3;
-}
+
 body {
     display: flex;
     justify-content: center;
@@ -24,6 +10,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #FFFFFF;
+    position: relative;
 }
 
 * {
@@ -34,14 +21,14 @@ header {
     background-color: #EC362D;
     width: 100%;
     height: 69px;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 1px 8px lightslategray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 header p {
@@ -147,21 +134,6 @@ p:hover {
     display: none;
 }
 
-.topo {
-    font-size: 37px;
-    font-weight: 700;
-    color: #ffffff;
-    background-color: #EC362D;
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1;
-}
 
 /*página quizz*/
 .telaDois {
@@ -178,6 +150,7 @@ p:hover {
 
 .top {
     width: 100%;
+    margin-top: 69px;
     position: relative;
     background: linear-gradient(to bottom, rgba(0,0,0,0.1) ,rgba(0,0,0,0.6));
 }
@@ -189,6 +162,7 @@ p:hover {
     position: relative;
     z-index: -1;
 }
+
 .titulo-quizz {
     font-size: 39px;
     color: #ffffff;
@@ -203,32 +177,36 @@ p:hover {
     top: 0;
     z-index: 0;
 }
+
 .conteudo-perguntas {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .perguntas {
     width: 759px;
     padding: 25px 35px 25px 35px;
     margin-top: 70px;
     box-shadow: 0 0 1em rgba(0,0,0,0.3);
-    background-color: #e5e5e5;
+    background-color: #ffffff;
 }
 
 .perguntas:last-child {
     margin-bottom: 30px;
 }
+
 .pergunta {
     font-size: 23px;
     font-weight: 700;
-    color: #ffffff;
+    color: #e5e5e5;
     height: 138px;
     width: 689px;
     display: flex;
     justify-content: center;
     align-items: center;  
 }
+
 .respostas {
     width: 689px;
     display: flex;
@@ -549,4 +527,57 @@ ul.nivel1:first-child {
 }
 
 
+/*RESPONSIVIDADE*/
+@media (max-width: 375px) {
 
+    body {
+        width: 375px;
+    }
+
+    .conteudo-quizz {
+        width: 100%;
+    }
+    
+    .pagina-quizz {
+        width: 100%;
+    }
+
+    header {
+        width: 375px;
+    }
+
+    .top>img {
+        height: 142px;
+    }
+
+    .titulo-quizz {
+        font-size: 19px;
+    }
+
+    .perguntas {
+        width: 100%;
+        margin-top: 24px;
+        padding: 18px 18px 18px 18px;
+    }
+
+    .pergunta {
+        font-size: 19px;
+        height: 90px;
+        width: auto;
+    }
+
+    .resposta>img {
+        height: 113px;
+        width: 163px;
+        margin-top: 13px;
+    }
+    .resposta-texto {
+        width: 163px;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+    .respostas {
+        width: 100%;
+    }
+}

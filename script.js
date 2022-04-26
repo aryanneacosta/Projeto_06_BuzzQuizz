@@ -148,17 +148,22 @@ function mostrarTelaQuizz(perguntas) {
     }
 
     //calcular o level do usuário
+
+    
     let acertosUsuario = 0;
     let i = 0;
-    while (i < questions.length) {
+    while (i < questions.length - 1) {
         const opcao = document.querySelector(`.pergunta${i}`).parentElement.querySelectorAll(".resposta");
-        if (opcao.classList.contains(".certo")) {
-            acertosUsuario += 1;
+        console.log(opcao)
+        for (let item of opcao) {
+            if (item.classList.includes(".certo") && !item.classList.includes(".nao-selecionado")) {
+                acertosUsuario += 1;
+            }
         }
         i++
     }
     const levelUsuario = (acertosUsuario / i) * 100;
-    console.log(levelUsuario)
+    console.log("levelUsuario: ", levelUsuario)
 
 
     //adicionando o texto da API
@@ -167,13 +172,14 @@ function mostrarTelaQuizz(perguntas) {
     const imgFinal = document.querySelector(".finalizar-content");
     const textoFinal = document.querySelector(".finalizar-texto");
 
+    console.log(level)
     for (let i = 0; i < level.length; i++) {
-        if (levelUsuario > level.minValue) {
+        if (levelUsuario > level[i].minValue) {
 
         } else {
-            tituloFinal.innerHTML = level.title;
-            imgFinal.innerHTML = level.image;
-            textoFinal.innerHTML = level.text;
+            tituloFinal.innerHTML = level[i].title;
+            imgFinal.innerHTML = level[i].image;
+            textoFinal.innerHTML = level[i].text;
         }
     }
 }
