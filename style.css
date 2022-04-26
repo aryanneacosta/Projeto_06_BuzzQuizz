@@ -489,7 +489,7 @@ ul.nivel1:first-child {
     display: flex;
 }
 
-.finalizar-content>p {
+.finalizar-texto {
     margin-left: 18px;
     color: #484848;
     font-size: 19px;
@@ -515,6 +515,10 @@ ul.nivel1:first-child {
     margin-bottom: 16px;
 }
 
+.reiniciar:hover {
+    cursor: pointer;
+}
+
 .voltar {
     margin: auto;
     height: 44px;
@@ -524,6 +528,10 @@ ul.nivel1:first-child {
     justify-content: center;
     align-items: center;
     margin-bottom: 85px;
+}
+
+.voltar:hover {
+    cursor: pointer;
 }
 
 
