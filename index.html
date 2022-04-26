@@ -19,101 +19,57 @@
 
 <body>
 
-<div class="telaUm">
+    <div class="topo"> BuzzQuizz </div>
 
-    <header>
-        <p> 
-            BuzzQuizz
-        </p>
-    </header>
-
-    <main class="telaUmCorpo">
-
-    <section class="criarQuizz">
-        <span>Você não criou nenhum quizz ainda :(</span>
-        <button data-identifier="create-quizz" onclick="telaCriarQuizz()">Criar Quizz</button>
-    </section>
-
-    <section class="todosOsQuizzes">
-        <h1>
-            Todos os Quizzes
-        </h1>
-        <div class="containerImagens">
-        </div>
-    </section>
-
+    <main class="tela1">
+        <section class="criarQuizz">
+            <span>Você não criou nenhum quizz ainda :(</span>
+            <button data-identifier="create-quizz" onclick="telaCriarQuizz()">Criar Quizz</button>
+        </section>
+        <section class="todosOsQuizzes">
+            <h1> Todos os Quizzes </h1>
+            <div class="containerImagens" data-identifier="general-quizzes"> </div>
+        </section>
     </main>
-</div>
 
-<div class="telaDois escondido">
+    <main class="tela2 escondido">
 
-    <div class="topo">
-        BuzzQuizz
-    </div>
+        <div class="perguntas"></div>
+    
+    </main>
 
-    <div class="página quizz">
+    <main class="telasQuizzes escondido"> </main>
 
-        <div class="top">
-            <img src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2022/03/Hogwarts.jpg" />
-            <div class="titulo-quizz">O quanto você sabe de Hogwarts?</div>
-        </div>
-
-    <div class="conteudo-perguntas">
-
-        <div class="perguntas">
-
-            <div class="pergunta">Qual o sobrenome do Harry?</div>
-            <div class="respostas">
-                <div class="resposta">
-                    <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-                    <div class="resposta-texto">Styles</div>         
-                </div>
-                <div class="resposta">
-                    <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-                    <div class="resposta-texto">Styles</div>
-                </div>
-                <div class="resposta">
-                    <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-                    <div class="resposta-texto">Styles</div>
-                </div>
-                <div class="resposta">
-                    <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-                    <div class="resposta-texto">Styles</div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="perguntas">
-
-            <div class="pergunta">Qual o sobrenome do Harry?</div>
-            <div class="respostas">
-                <div class="resposta">
-                    <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-                    <div class="resposta-texto">Styles</div>        
-                </div>
-                <div class="resposta">
-                    <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-                    <div class="resposta-texto">Styles</div>
-                </div>
-                <div class="resposta">
-                    <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-                    <div class="resposta-texto">Styles</div>
-                </div>
-                <div class="resposta">
-                    <img src="https://gkpb.com.br/wp-content/uploads/2021/12/gkpb-cinemark-reexibe-harry-potter.jpg"/>
-                    <div class="resposta-texto">Styles</div>
-                </div>
+        <div class="tela3-1 escondido">
+            <h2> Comece pelo começo </h2>
+            <ul class="containerInformaçõesBasicas">
+                <input id="inputTitulo" type="text" placeholder="Título do seu quizz" />
+                <input id="inputImagem" type="url" placeholder="URL da imagem do seu quizz" />
+                <input id="inputPerguntas" type="number" placeholder="Quantidade de perguntas do quizz" />
+                <input id="inputNiveis" type="number" placeholder="Quantidade de níveis do quizz" />
+            </ul>
+            <div class="botaoVermelho"> 
+                <button onclick="pegarInformaçõesBasicas()"> Prosseguir para criar perguntas </button>
             </div>
         </div>
-    </div>
-    </div>
-</div>
+ 
+        <div class="tela3-2 escondido">
+            <h2> Crie suas perguntas </h2> 
+        </div>
+
+        <div class="tela3-3 escondido">
+            <h2> Agora, decida os níveis! </h2>
+        </div>
+
+        <div class="tela3-4 escondido">
+            <h2> Seu Quizz está pronto! </h2>
+        </div>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="script.js"></script>
 
 </body>
 
 </html>
-

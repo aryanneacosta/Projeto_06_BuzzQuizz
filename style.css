@@ -1,3 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+.topo {
+    font-size: 37px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #EC362D;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
 body {
     display: flex;
     justify-content: center;
@@ -6,29 +24,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #FFFFFF;
 }
-* {
-    box-sizing: border-box;
-}
-header {
-    background-color: #EC362D;
-    width: 100%;
-    height: 69px;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 1px 8px lightslategray;
-}
-header p {
-    color: #FFFFFF;
-    font-size: 37px;
-    font-weight: 700;
-    line-height: 43px;
-}
+/* TELA 1 */
 .criarQuizz {
     border: 2px dotted #D4D4D4;
     border-radius: 5px;
@@ -79,6 +77,7 @@ header p {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+/* TELA 2 */
 .top2 {
     position: relative;
     margin-top: 70px;
@@ -110,33 +109,12 @@ header p {
     margin: -60px;
     margin-left: 10px;
 }
-.escondido {
-    display: none;
-}
-
-.topo {
-    font-size: 37px;
-    font-weight: 700;
-    color: #ffffff;
-    background-color: #EC362D;
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 1;
-}
-
 /*página quizz*/
 .top {
     position: relative;
     margin-top: 70px;
     background: linear-gradient(to bottom, rgba(0,0,0,0.1) ,rgba(0,0,0,0.6));
 }
-
 .top img {
     height: 227px;
     width: 100%;
@@ -144,7 +122,6 @@ header p {
     position: relative;
     z-index: -1;
 }
-
 .titulo-quizz {
     font-size: 39px;
     color: #ffffff;
@@ -159,7 +136,6 @@ header p {
     top: 0;
     z-index: 0;
 }
-
 .conteudo-perguntas {
     width: 100%;
     display: flex;
@@ -167,13 +143,11 @@ header p {
     align-items: center;
     background-color: #e5e5e5;
 }
-
 .perguntas {
     padding: 25px 35px 25px 35px;
     margin-top: 70px;
     box-shadow: 0 0 1em rgba(0,0,0,0.3);
 }
-
 .pergunta {
     font-size: 23px;
     font-weight: 700;
@@ -185,22 +159,238 @@ header p {
     justify-content: center;
     align-items: center;  
 }
-
 .respostas {
     width: 689px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-.resposta>img {
+.resposta > img {
     height: 175px;
     width: 330px;
     margin-top: 20px;
 }
-
 .resposta-texto {
     font-size: 20px;
     font-weight: 700;
     margin-top: 10px;
+}
+/* TELA 3-1 */
+.tela3-1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 69px;
+    justify-content: center;
+    align-items: center;
+}
+h2 {
+    min-height: 89px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+}
+ul.containerInformaçõesBasicas {
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    height: 256px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+input {
+    height: 46px;
+    width: 564px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    color: #BABABA;
+    font-size: 17px;
+    word-break: break-word;
+}
+.botaoVermelho {
+    background: #EC362D;
+    width: 368.86px;
+    height: 54px;
+    margin-top: 86px;
+    border-radius: 15px;
+    margin-bottom: 435px;
+}
+.botaoVermelho button {
+    color: #FFF5F4;
+    font-size: 21px;
+    line-height: 24.61px;
+    width: 100%;
+    height: 100%;
+    background: #EC362D;
+    border-radius: 15px;
+    cursor: pointer;
+}
+/* TELA 3-2 */
+.tela3-2 {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 69px;
+    height: 100%;
+}
+ul.questao1 {
+    width: 375px;
+    height: 825px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFFFFF;
+}
+ul.questao1:first-child {
+    margin-top: -28px;
+} 
+input:nth-child(13) {
+    margin-bottom: 18px;
+}
+.main img {
+    width: 25px;
+    margin-right: 25px;
+}
+/* TELA 3.3 */
+.nivel1 textarea:last-of-type {
+    border: 1px solid #d1d1d1;
+    height: 177px;
+    margin-bottom: 20px;
+    width: 341px;
+    overflow-y: scroll;
+    resize: none;
+}
+ul.nivel1:first-child {
+    margin-bottom: 20px;
+}
+ul.nivel1 textarea::-webkit-scrollbar {
+    display: none;
+}
+*:focus {
+    outline: none;
+}  
+*:focus::placeholder {
+    color: transparent;
+} 
+ul.nivel1 textarea::placeholder {
+    padding-top: 20px;
+}
+ul.nivel1 {
+    background-color: #FFFFFF;
+    width: 375px;
+    height: 439px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 28px;
+}
+ul.nivel1:first-child {
+    margin-top: -28px;
+} 
+.main h3 {
+    width: 200px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: left;
+    margin: 27px auto 0px 17px;
+}
+.tela3-3 ul.nivel1:last-of-type {
+    margin-bottom: 0px;
+}
+.botaoVermelho {
+    background: #EC362D;
+    width: 368.86px;
+    height: 54px;
+    margin-top: 86px;
+    border-radius: 15px;
+    margin-bottom: 435px;
+}
+.botaoVermelho button {
+    color: #FFF5F4;
+    font-size: 21px;
+    line-height: 24.61px;
+    width: 100%;
+    height: 100%;
+    background: #EC362D;
+    border-radius: 15px;
+    cursor: pointer;
+}
+/* TELA 3.4 */
+.tela3-4 {
+    width: 375px;
+    height: 749px;
+}
+.tela3-4 h2 {
+    min-height: 89px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+}
+.tela3-4 ul.telaSucesso {
+    width: 340px;
+    height: 181px;
+    cursor: pointer;
+    word-wrap: break-word;
+    margin-top: 69px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 5px;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 64.58%,#000000 100%);
+    background-position: center;
+    background-size: cover;
+}
+.tela3-4 ul.telaSucesso span {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 19px;
+    line-height: 22px;
+    padding-left: 17px;
+    padding-bottom: 17px;
+}
+.clicar {
+    background-color: #FFFFFF;
+    width: 375px;
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    cursor: pointer;
+}
+.clicar h2 {
+    align-items: center;
+    color: #000000;
+    margin-left: 17px;
+    display: flex;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+}
+.abrirDiv {
+    margin-right: 26px;
+    width: 26px;
+    height: 26px;
+}
+.escondido {
+    display: none;
 }
