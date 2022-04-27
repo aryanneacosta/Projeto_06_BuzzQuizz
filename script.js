@@ -1,4 +1,4 @@
-const URL_API = "https://mock-api.driven.com.br/api/v6/buzzquizz";
+const URL_API = "https://mock-api.driven.com.br/api/v4/buzzquizz";
 const arrQuizzes = [];
 const idQuizzes = [];
 let arrAPI = [];
